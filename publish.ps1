@@ -3,6 +3,8 @@ param([string]$Message = "글 업데이트 $(Get-Date -Format 'yyyy-MM-dd HH:mm'
 
 $ErrorActionPreference = 'Stop'
 Set-Location $PSScriptRoot
+# 새로 설치한 git이 이전에 열린 창에서도 잡히도록 PATH를 다시 읽는다
+$env:Path = [Environment]::GetEnvironmentVariable('Path', 'Machine') + ';' + [Environment]::GetEnvironmentVariable('Path', 'User')
 
 node build.js
 if ($LASTEXITCODE -ne 0) { throw '사이트 빌드에 실패했어요.' }
