@@ -194,6 +194,17 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 24px 80px; }
   width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: 13px; font-weight: 800; font-style: italic;
 }
 
+/* 30초 요약 상자 */
+.prose .summary {
+  margin: 28px 0 8px; padding: 22px 24px 8px; border-radius: 18px;
+  background: linear-gradient(180deg, rgba(163, 230, 53, .08), rgba(163, 230, 53, .02));
+  border: 1px solid rgba(163, 230, 53, .3);
+}
+.prose .summary-title { margin: 0 0 12px; font-size: 13px; font-weight: 800; letter-spacing: .12em; color: var(--accent); }
+.prose .summary ul { list-style: none; padding: 0; }
+.prose .summary li { position: relative; padding-left: 18px; margin-bottom: 12px; line-height: 1.65; }
+.prose .summary li::before { content: ""; position: absolute; left: 0; top: .7em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+
 .table-scroll { overflow-x: auto; margin: 8px 0 28px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
 .prose table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.6; }
 .prose th, .prose td { padding: 12px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
@@ -226,11 +237,11 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 24px 80px; }
 .footer-note { max-width: var(--max); margin: 0 auto; padding: 20px 24px 40px; border-top: 1px solid rgba(255, 255, 255, .08); font-size: 13px; line-height: 1.7; }
 .footer-note p { margin: 0 0 4px; }
 
-/* 흰 배경 제품 사진이 밝은 판 위에 자연스럽게 놓이도록 */
-.lead-media img, .card-media img, .prose figure img { mix-blend-mode: multiply; }
-.article-hero { background: var(--media-bg); border-radius: 24px; padding: 32px; }
-.article-hero img { mix-blend-mode: multiply; padding: 0; background: transparent; border-radius: 0; }
-.article-hero figcaption { color: #6b6b75; }
+/* 제품 사진은 사진 자체의 배경이 판이 되도록 여백 없이 꽉 채운다
+   (제조사마다 배경색이 달라 판 색을 맞추면 사진 경계가 네모로 드러난다) */
+.lead-media img, .card-media img { object-fit: cover; padding: 0; }
+.article-hero img, .prose figure img { padding: 0; border-radius: 20px; background: transparent; }
+.article-hero img { max-height: none; }
 
 /* 대표 사진이 없는 글의 표지 */
 .placeholder {
