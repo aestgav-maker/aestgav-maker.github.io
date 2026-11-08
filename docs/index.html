@@ -12,7 +12,7 @@
   <meta property="og:description" content="화제의 신제품, 먼저 써 본 사람들의 후기와 공식 자료를 모아 장단점과 비교까지 한눈에 정리합니다.">
   <meta property="og:url" content="https://aestgav-maker.github.io/">
   
-  <meta name="theme-color" content="#0b0d12">
+  <meta name="theme-color" content="#000000">
   <link rel="alternate" type="application/rss+xml" title="후기 한눈에" href="https://aestgav-maker.github.io/feed.xml">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
@@ -29,30 +29,59 @@
         <span class="brand-name">후기 한눈에</span>
       </a>
       <nav class="nav" aria-label="카테고리"><a href="/category/smartphone/">스마트폰</a><a href="/category/audio/">오디오</a></nav>
+      <a class="header-search" href="/#finder" aria-label="후기 검색"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>후기 검색</span></a>
       <a class="header-link" href="/about/">편집 원칙</a>
     </div>
   </header>
   <main>
-    <section class="hero-intro">
+    <section class="finder" id="finder">
       <p class="eyebrow">Tech Review Curation</p>
-      <h2>사기 전에, 먼저 써 본 사람들의 이야기를 한눈에</h2>
-      <p>화제의 신제품마다 실사용 후기와 공식 자료, 경쟁 제품 비교까지 꼼꼼히 모아 정리합니다.</p>
+      <h1>사기 전에, 먼저 써 본<br>사람들의 후기를 한눈에</h1>
+      <p class="finder-sub">실사용 후기와 공식 자료, 경쟁 제품 비교까지 정리한 리뷰 2편</p>
+      <form class="search" role="search" action="/" onsubmit="return false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" name="q" autocomplete="off" placeholder="제품명, 브랜드, 키워드로 후기 찾기" aria-label="후기 검색">
+        <kbd>/</kbd>
+      </form>
+      <div class="popular"><span>추천 검색어</span><button type="button" data-q="아이폰듀오">#아이폰듀오</button><button type="button" data-q="아이폰듀오후기">#아이폰듀오후기</button><button type="button" data-q="폴더블아이폰">#폴더블아이폰</button><button type="button" data-q="갤럭시Z폴드8">#갤럭시Z폴드8</button><button type="button" data-q="아이폰듀오가격">#아이폰듀오가격</button><button type="button" data-q="폴더블폰비교">#폴더블폰비교</button><button type="button" data-q="갤럭시버즈온">#갤럭시버즈온</button><button type="button" data-q="갤럭시버즈온후기">#갤럭시버즈온후기</button></div>
     </section>
-    <section class="lead">
+    <div id="featured"><section class="lead">
       <a class="lead-link" href="/iphone-duo/">
         <div class="lead-media"><div class="placeholder cat-smartphone"><span>스마트폰</span><strong>아이폰 듀오</strong></div></div>
         <div class="lead-text">
           <span class="kicker">최신 리뷰 · 스마트폰</span>
-          <h1>아이폰 듀오 후기 총정리: 장단점, 갤럭시 Z 폴드8 비교, 살까 말까</h1>
+          <h2>아이폰 듀오 후기 총정리: 장단점, 갤럭시 Z 폴드8 비교, 살까 말까</h2>
           <p>애플 첫 폴더블 아이폰 듀오 실사용 후기와 외신 평가를 모아 가격, 앱 최적화, 멀티태스킹, 배터리, 내구성까지 장단점을 정리하고 갤럭시 Z 폴드8과 비교했습니다.</p>
           <div class="meta"><time datetime="2026-11-08">2026. 11. 8.</time><span>16분 읽기</span><span>자료 15건 종합</span></div>
           <span class="lead-cta">리뷰 읽기 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
-    </section>
-    <section class="latest">
-      <div class="section-head"><h2>최신 리뷰</h2></div>
-      <div class="grid"><article class="card ">
+    </section></div>
+    <section class="browse" id="browse">
+      <div class="browse-bar">
+        <div class="chips" role="group" aria-label="카테고리"><button type="button" class="chip" data-cat="" aria-pressed="true">전체 <span>2</span></button><button type="button" class="chip" data-cat="smartphone" aria-pressed="false">스마트폰 <span>1</span></button><button type="button" class="chip" data-cat="audio" aria-pressed="false">오디오 <span>1</span></button></div>
+        <label class="sort"><span>정렬</span>
+          <select id="sort">
+            <option value="new">최신순</option>
+            <option value="old">오래된순</option>
+            <option value="title">가나다순</option>
+            <option value="short">짧게 읽는 순</option>
+          </select>
+        </label>
+      </div>
+      <p class="result-count" id="count" aria-live="polite">전체 후기 2편</p>
+      <div class="grid" id="list"><article class="card " data-cat="smartphone" data-date="2026-11-08" data-min="16" data-title="아이폰 듀오 후기 총정리: 장단점, 갤럭시 Z 폴드8 비교, 살까 말까" data-text="아이폰 듀오 후기 총정리: 장단점, 갤럭시 z 폴드8 비교, 살까 말까 애플 첫 폴더블 아이폰 듀오 실사용 후기와 외신 평가를 모아 가격, 앱 최적화, 멀티태스킹, 배터리, 내구성까지 장단점을 정리하고 갤럭시 z 폴드8과 비교했습니다. 스마트폰 아이폰듀오 아이폰듀오후기 폴더블아이폰 갤럭시z폴드8 아이폰듀오가격 폴더블폰비교">
+        <a href="/iphone-duo/" class="card-link">
+          <div class="card-media"><div class="placeholder cat-smartphone"><span>스마트폰</span><strong>아이폰 듀오</strong></div></div>
+          <div class="card-body">
+            <span class="kicker">스마트폰</span>
+            <h3>아이폰 듀오 후기 총정리: 장단점, 갤럭시 Z 폴드8 비교, 살까 말까</h3>
+            <p>애플 첫 폴더블 아이폰 듀오 실사용 후기와 외신 평가를 모아 가격, 앱 최적화, 멀티태스킹, 배터리, 내구성까지 장단점을 정리하고 갤럭시 Z 폴드8과 비교했습니다.</p>
+            <div class="meta"><time datetime="2026-11-08">2026. 11. 8.</time><span>16분 읽기</span></div>
+          </div>
+        </a>
+      </article>
+<article class="card " data-cat="audio" data-date="2026-11-08" data-min="5" data-title="갤럭시 버즈 온 후기 총정리: 장단점, 샥즈 오픈닷 2 비교, 살까 말까" data-text="갤럭시 버즈 온 후기 총정리: 장단점, 샥즈 오픈닷 2 비교, 살까 말까 갤럭시 버즈 온 실사용 후기를 모아 음질, 착용감, 통화 품질, 소리 샘까지 장단점을 정리하고 샥즈 오픈닷 2와 비교했습니다. 오디오 갤럭시버즈온 갤럭시버즈온후기 버즈온 클립형이어폰 오픈형이어폰 샥즈오픈닷2 무선이어폰추천">
         <a href="/galaxy-buds-on/" class="card-link">
           <div class="card-media"><img src="/images/galaxy-buds-on/product-3.jpg" alt="" loading="lazy"></div>
           <div class="card-body">
@@ -63,7 +92,65 @@
           </div>
         </a>
       </article></div>
+      <div class="empty" id="empty" hidden>
+        <strong>찾는 후기가 아직 없어요</strong>
+        <p>다른 검색어를 써 보거나 <button type="button" id="reset">전체 후기 보기</button></p>
+      </div>
     </section>
+    <script>
+      (function () {
+        var q = document.getElementById('q'), sort = document.getElementById('sort');
+        var list = document.getElementById('list'), count = document.getElementById('count');
+        var empty = document.getElementById('empty'), featured = document.getElementById('featured');
+        var cards = Array.prototype.slice.call(list.children);
+        var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+        var cat = '';
+        var norm = function (s) { return s.toLowerCase().replace(/\s+/g, ''); };
+        var sorters = {
+          'new': function (a, b) { return b.dataset.date.localeCompare(a.dataset.date); },
+          'old': function (a, b) { return a.dataset.date.localeCompare(b.dataset.date); },
+          'title': function (a, b) { return a.dataset.title.localeCompare(b.dataset.title, 'ko'); },
+          'short': function (a, b) { return a.dataset.min - b.dataset.min; }
+        };
+        function render() {
+          var words = q.value.trim().split(/\s+/).filter(Boolean).map(norm);
+          var shown = 0;
+          cards.sort(sorters[sort.value]).forEach(function (c) {
+            var text = norm(c.dataset.text);
+            var ok = (!cat || c.dataset.cat === cat) && words.every(function (w) { return text.indexOf(w) !== -1; });
+            c.hidden = !ok; if (ok) shown++;
+            list.appendChild(c);
+          });
+          var label = chips.filter(function (b) { return b.dataset.cat === cat; })[0].firstChild.textContent.trim();
+          count.textContent = (q.value.trim() ? '"' + q.value.trim() + '" ' : '') + (cat ? label + ' ' : '전체 ') + '후기 ' + shown + '편';
+          empty.hidden = shown > 0;
+          featured.hidden = !!(q.value.trim() || cat);
+          var url = new URL(location.href);
+          q.value.trim() ? url.searchParams.set('q', q.value.trim()) : url.searchParams.delete('q');
+          cat ? url.searchParams.set('cat', cat) : url.searchParams.delete('cat');
+          history.replaceState(null, '', url);
+        }
+        function setCat(c) {
+          cat = c;
+          chips.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.cat === cat)); });
+          render();
+        }
+        chips.forEach(function (b) { b.addEventListener('click', function () { setCat(b.dataset.cat); }); });
+        document.querySelectorAll('.popular button').forEach(function (b) {
+          b.addEventListener('click', function () { q.value = b.dataset.q; render(); document.getElementById('browse').scrollIntoView({ behavior: 'smooth' }); });
+        });
+        document.getElementById('reset').addEventListener('click', function () { q.value = ''; setCat(''); });
+        q.addEventListener('input', render);
+        sort.addEventListener('change', render);
+        document.addEventListener('keydown', function (e) {
+          if (e.key === '/' && document.activeElement !== q) { e.preventDefault(); q.focus(); }
+        });
+        var params = new URLSearchParams(location.search);
+        q.value = params.get('q') || '';
+        if (location.hash === '#finder') q.focus();
+        setCat(params.get('cat') || '');
+      })();
+    </script>
     <section class="principles">
       <div class="principle"><span class="num">01</span><h3>후기는 출처와 함께</h3><p>누가 어디서 쓴 후기인지 밝히고, 원문 링크를 모두 남깁니다.</p></div>
       <div class="principle"><span class="num">02</span><h3>공식 자료로 사실 확인</h3><p>가격과 스펙은 제조사 발표를 기준으로, 확인되지 않은 수치는 쓰지 않습니다.</p></div>

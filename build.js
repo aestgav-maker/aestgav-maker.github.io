@@ -100,6 +100,7 @@ function header(activeSlug, cats) {
         <span class="brand-name">${escapeHtml(config.title)}</span>
       </a>
       <nav class="nav" aria-label="카테고리">${nav}</nav>
+      <a class="header-search" href="/#finder" aria-label="후기 검색"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>후기 검색</span></a>
       <a class="header-link" href="/about/">편집 원칙</a>
     </div>
   </header>`;
@@ -150,7 +151,7 @@ function layout({ title, description, url, image, body, cats, activeSlug = '', t
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${url}">
   ${image ? `<meta property="og:image" content="${base}${image}">\n  <meta name="twitter:card" content="summary_large_image">` : ''}
-  <meta name="theme-color" content="#0b0d12">
+  <meta name="theme-color" content="#000000">
   <link rel="alternate" type="application/rss+xml" title="${escapeHtml(config.title)}" href="${base}/feed.xml">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
@@ -176,7 +177,8 @@ function placeholder(p) {
 }
 
 function card(p, size = '') {
-  return `<article class="card ${size}">
+  const searchText = [p.title, p.description, p.category.name, ...p.tags].join(' ').toLowerCase();
+  return `<article class="card ${size}" data-cat="${p.category.slug}" data-date="${p.date}" data-min="${p.minutes}" data-title="${escapeHtml(p.title)}" data-text="${escapeHtml(searchText)}">
         <a href="/${p.slug}/" class="card-link">
           <div class="card-media">${p.hero ? `<img src="${p.hero.src}" alt="" loading="lazy">` : placeholder(p)}</div>
           <div class="card-body">
@@ -232,7 +234,7 @@ function build() {
     const tocHtml = post.toc.length
       ? `<nav class="toc" aria-label="목차"><p class="toc-title">목차</p><ol>${post.toc.map((t) => `<li><a href="#${t.id}">${escapeHtml(t.text)}</a></li>`).join('')}</ol></nav>`
       : '';
-    const tags = post.tags.map((t) => `<li>#${escapeHtml(t)}</li>`).join('');
+    const tags = post.tags.map((t) => `<li><a href="/?q=${encodeURIComponent(t)}#browse">#${escapeHtml(t)}</a></li>`).join('');
 
     const body = `    <div class="progress" aria-hidden="true"><span></span></div>
     <article class="article">
@@ -286,29 +288,111 @@ ${post.body}
   }
 
   // 첫 화면
-  const [lead, ...rest] = posts;
+  const [lead] = posts;
   const leadHtml = lead ? `<section class="lead">
       <a class="lead-link" href="/${lead.slug}/">
         <div class="lead-media">${lead.hero ? `<img src="${lead.hero.src}" alt="${escapeHtml(lead.hero.alt)}">` : placeholder(lead)}</div>
         <div class="lead-text">
           <span class="kicker">최신 리뷰 · ${escapeHtml(lead.category.name)}</span>
-          <h1>${escapeHtml(lead.title)}</h1>
+          <h2>${escapeHtml(lead.title)}</h2>
           <p>${escapeHtml(lead.description)}</p>
           <div class="meta"><time datetime="${lead.date}">${formatDate(lead.date)}</time><span>${lead.minutes}분 읽기</span>${lead.refCount ? `<span>자료 ${lead.refCount}건 종합</span>` : ''}</div>
           <span class="lead-cta">리뷰 읽기 ${ICON_ARROW}</span>
         </div>
       </a>
     </section>` : '';
-  const homeBody = `    <section class="hero-intro">
+  // 많이 쓰인 태그를 추천 검색어로
+  const tagCount = new Map();
+  posts.forEach((p) => p.tags.forEach((t) => tagCount.set(t, (tagCount.get(t) || 0) + 1)));
+  const popular = [...tagCount.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8).map(([t]) => t);
+  const chips = [`<button type="button" class="chip" data-cat="" aria-pressed="true">전체 <span>${posts.length}</span></button>`,
+    ...usedCats.map((c) => `<button type="button" class="chip" data-cat="${c.slug}" aria-pressed="false">${escapeHtml(c.name)} <span>${posts.filter((p) => p.category.slug === c.slug).length}</span></button>`)].join('');
+
+  const homeBody = `    <section class="finder" id="finder">
       <p class="eyebrow">Tech Review Curation</p>
-      <h2>사기 전에, 먼저 써 본 사람들의 이야기를 한눈에</h2>
-      <p>화제의 신제품마다 실사용 후기와 공식 자료, 경쟁 제품 비교까지 꼼꼼히 모아 정리합니다.</p>
+      <h1>사기 전에, 먼저 써 본<br>사람들의 후기를 한눈에</h1>
+      <p class="finder-sub">실사용 후기와 공식 자료, 경쟁 제품 비교까지 정리한 리뷰 ${posts.length}편</p>
+      <form class="search" role="search" action="/" onsubmit="return false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" name="q" autocomplete="off" placeholder="제품명, 브랜드, 키워드로 후기 찾기" aria-label="후기 검색">
+        <kbd>/</kbd>
+      </form>
+      ${popular.length ? `<div class="popular"><span>추천 검색어</span>${popular.map((t) => `<button type="button" data-q="${escapeHtml(t)}">#${escapeHtml(t)}</button>`).join('')}</div>` : ''}
     </section>
-    ${leadHtml}
-    ${rest.length ? `<section class="latest">
-      <div class="section-head"><h2>최신 리뷰</h2></div>
-      <div class="grid">${rest.map((p) => card(p)).join('\n')}</div>
-    </section>` : ''}
+    <div id="featured">${leadHtml}</div>
+    <section class="browse" id="browse">
+      <div class="browse-bar">
+        <div class="chips" role="group" aria-label="카테고리">${chips}</div>
+        <label class="sort"><span>정렬</span>
+          <select id="sort">
+            <option value="new">최신순</option>
+            <option value="old">오래된순</option>
+            <option value="title">가나다순</option>
+            <option value="short">짧게 읽는 순</option>
+          </select>
+        </label>
+      </div>
+      <p class="result-count" id="count" aria-live="polite">전체 후기 ${posts.length}편</p>
+      <div class="grid" id="list">${posts.map((p) => card(p)).join('\n')}</div>
+      <div class="empty" id="empty" hidden>
+        <strong>찾는 후기가 아직 없어요</strong>
+        <p>다른 검색어를 써 보거나 <button type="button" id="reset">전체 후기 보기</button></p>
+      </div>
+    </section>
+    <script>
+      (function () {
+        var q = document.getElementById('q'), sort = document.getElementById('sort');
+        var list = document.getElementById('list'), count = document.getElementById('count');
+        var empty = document.getElementById('empty'), featured = document.getElementById('featured');
+        var cards = Array.prototype.slice.call(list.children);
+        var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+        var cat = '';
+        var norm = function (s) { return s.toLowerCase().replace(/\\s+/g, ''); };
+        var sorters = {
+          'new': function (a, b) { return b.dataset.date.localeCompare(a.dataset.date); },
+          'old': function (a, b) { return a.dataset.date.localeCompare(b.dataset.date); },
+          'title': function (a, b) { return a.dataset.title.localeCompare(b.dataset.title, 'ko'); },
+          'short': function (a, b) { return a.dataset.min - b.dataset.min; }
+        };
+        function render() {
+          var words = q.value.trim().split(/\\s+/).filter(Boolean).map(norm);
+          var shown = 0;
+          cards.sort(sorters[sort.value]).forEach(function (c) {
+            var text = norm(c.dataset.text);
+            var ok = (!cat || c.dataset.cat === cat) && words.every(function (w) { return text.indexOf(w) !== -1; });
+            c.hidden = !ok; if (ok) shown++;
+            list.appendChild(c);
+          });
+          var label = chips.filter(function (b) { return b.dataset.cat === cat; })[0].firstChild.textContent.trim();
+          count.textContent = (q.value.trim() ? '"' + q.value.trim() + '" ' : '') + (cat ? label + ' ' : '전체 ') + '후기 ' + shown + '편';
+          empty.hidden = shown > 0;
+          featured.hidden = !!(q.value.trim() || cat);
+          var url = new URL(location.href);
+          q.value.trim() ? url.searchParams.set('q', q.value.trim()) : url.searchParams.delete('q');
+          cat ? url.searchParams.set('cat', cat) : url.searchParams.delete('cat');
+          history.replaceState(null, '', url);
+        }
+        function setCat(c) {
+          cat = c;
+          chips.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.cat === cat)); });
+          render();
+        }
+        chips.forEach(function (b) { b.addEventListener('click', function () { setCat(b.dataset.cat); }); });
+        document.querySelectorAll('.popular button').forEach(function (b) {
+          b.addEventListener('click', function () { q.value = b.dataset.q; render(); document.getElementById('browse').scrollIntoView({ behavior: 'smooth' }); });
+        });
+        document.getElementById('reset').addEventListener('click', function () { q.value = ''; setCat(''); });
+        q.addEventListener('input', render);
+        sort.addEventListener('change', render);
+        document.addEventListener('keydown', function (e) {
+          if (e.key === '/' && document.activeElement !== q) { e.preventDefault(); q.focus(); }
+        });
+        var params = new URLSearchParams(location.search);
+        q.value = params.get('q') || '';
+        if (location.hash === '#finder') q.focus();
+        setCat(params.get('cat') || '');
+      })();
+    </script>
     <section class="principles">
       <div class="principle"><span class="num">01</span><h3>후기는 출처와 함께</h3><p>누가 어디서 쓴 후기인지 밝히고, 원문 링크를 모두 남깁니다.</p></div>
       <div class="principle"><span class="num">02</span><h3>공식 자료로 사실 확인</h3><p>가격과 스펙은 제조사 발표를 기준으로, 확인되지 않은 수치는 쓰지 않습니다.</p></div>
