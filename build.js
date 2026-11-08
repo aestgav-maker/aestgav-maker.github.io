@@ -173,12 +173,14 @@ ${sitemap.map((u, i) => `  <url><loc>${u}</loc>${i > 0 ? `<lastmod>${posts[i - 1
       <description>${escapeHtml(p.description)}</description>
     </item>`).join('\n');
   fs.writeFileSync(path.join(out, 'feed.xml'), `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${escapeHtml(config.title)}</title>
     <link>${base}/</link>
     <description>${escapeHtml(config.description)}</description>
     <language>${config.language}</language>
+    <atom:link href="${base}/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 ${items}
   </channel>
 </rss>
