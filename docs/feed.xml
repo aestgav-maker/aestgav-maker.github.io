@@ -6,7 +6,15 @@
     <description>화제의 신제품, 먼저 써 본 사람들의 후기와 공식 자료를 모아 장단점과 비교까지 한눈에 정리합니다.</description>
     <language>ko</language>
     <atom:link href="https://aestgav-maker.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 08 Nov 2026 05:53:42 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 06:29:37 GMT</lastBuildDate>
+    <item>
+      <title>맥북 프로 M6 후기 총정리: 장단점, M5 맥북 프로 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/macbook-pro-m6/</link>
+      <guid>https://aestgav-maker.github.io/macbook-pro-m6/</guid>
+      <category>노트북·태블릿</category>
+      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
+      <description>11월 6일 국내 출시된 M6 맥북 프로 14와 터치 PROLED XDR 맥북 프로의 가격, 성능, 배터리, 화면, 터치에 대한 외신 리뷰를 모아 장단점을 정리하고 이전 M5 맥북 프로와 비교했습니다.</description>
+    </item>
     <item>
       <title>아이폰 듀오 후기 총정리: 장단점, 갤럭시 Z 폴드8 비교, 살까 말까</title>
       <link>https://aestgav-maker.github.io/iphone-duo/</link>
@@ -16,12 +24,68 @@
       <description>애플 첫 폴더블 아이폰 듀오 실사용 후기와 외신 평가를 모아 가격, 앱 최적화, 멀티태스킹, 배터리, 내구성까지 장단점을 정리하고 갤럭시 Z 폴드8과 비교했습니다.</description>
     </item>
     <item>
+      <title>아이폰 18 프로 / 18 프로 맥스 후기 총정리: 장단점, 갤럭시 S26 울트라 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/iphone-18-pro/</link>
+      <guid>https://aestgav-maker.github.io/iphone-18-pro/</guid>
+      <category>스마트폰</category>
+      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
+      <description>아이폰 18 프로·프로 맥스 실사용 후기와 국내 리뷰를 모아 가격, 가변 조리개 카메라, 배터리, 발열, 무게, 패닉풀 이슈까지 장단점을 정리하고 갤럭시 S26 울트라와 비교했습니다.</description>
+    </item>
+    <item>
+      <title>새 아이패드 미니(OLED, A20 Pro) 후기 총정리: 장단점, 이전 아이패드 미니(A17 Pro) 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/ipad-mini-oled/</link>
+      <guid>https://aestgav-maker.github.io/ipad-mini-oled/</guid>
+      <category>노트북·태블릿</category>
+      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
+      <description>OLED와 A20 Pro를 넣은 새 아이패드 미니의 국내 가격과 출시 정보, 엔가젯·맥월드·기즈모도 리뷰를 모아 화면, 60Hz, 스피커, 배터리, 성능 장단점을 정리하고 이전 A17 Pro 모델과 비교했습니다.</description>
+    </item>
+    <item>
+      <title>갤럭시 Z 폴드8 후기 총정리: 장단점, 아이폰 듀오 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/galaxy-z-fold8/</link>
+      <guid>https://aestgav-maker.github.io/galaxy-z-fold8/</guid>
+      <category>스마트폰</category>
+      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
+      <description>갤럭시 Z 폴드8을 한 달에서 두 달 넘게 쓴 구매자 후기와 국내 언론 리뷰를 모아 4:3 화면, 201g 무게, 배터리, 카메라, 발열, 스피커까지 장단점을 정리하고 아이폰 듀오와 가격·스펙을 비교했습니다.</description>
+    </item>
+    <item>
+      <title>갤럭시 탭 S12 울트라 후기 총정리: 장단점, 아이패드 프로 13형 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/galaxy-tab-s12/</link>
+      <guid>https://aestgav-maker.github.io/galaxy-tab-s12/</guid>
+      <category>노트북·태블릿</category>
+      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
+      <description>갤럭시 탭 S12 울트라와 S12 플러스의 국내 가격과 스펙, 기자 체험기와 구매자 후기를 모아 화면, 무게, 배터리, S펜, 반사 방지 코팅 제거 같은 장단점을 정리하고 아이패드 프로 13형(M5)과 비교했습니다.</description>
+    </item>
+    <item>
+      <title>갤럭시 스마트태그3 후기 총정리: 장단점, 애플 에어태그 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/galaxy-smarttag3/</link>
+      <guid>https://aestgav-maker.github.io/galaxy-smarttag3/</guid>
+      <category>생활</category>
+      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
+      <description>갤럭시 스마트태그3 공개 후기와 삼성 공식 자료를 모아 가격, 크기, 60m 컴퍼스 뷰, 아이폰 연동 범위, 배터리까지 장단점을 정리하고 애플 에어태그 2세대와 가격과 기능을 비교해 누구에게 맞는지 알려 드립니다.</description>
+    </item>
+    <item>
+      <title>갤럭시 S26 FE 후기 총정리: 장단점, 갤럭시 S26 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/galaxy-s26-fe/</link>
+      <guid>https://aestgav-maker.github.io/galaxy-s26-fe/</guid>
+      <category>스마트폰</category>
+      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
+      <description>갤럭시 S26 FE 실사용 후기와 국내외 리뷰를 모아 104만5000원 가격, 엑시노스 2500 성능, 배터리와 45W 충전, 카메라, USB 2.0 논란까지 장단점을 정리하고 갤럭시 S26과 비교했습니다.</description>
+    </item>
+    <item>
       <title>갤럭시 버즈 온 후기 총정리: 장단점, 샥즈 오픈닷 2 비교, 살까 말까</title>
       <link>https://aestgav-maker.github.io/galaxy-buds-on/</link>
       <guid>https://aestgav-maker.github.io/galaxy-buds-on/</guid>
       <category>오디오</category>
       <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
       <description>갤럭시 버즈 온 실사용 후기를 모아 음질, 착용감, 통화 품질, 소리 샘까지 장단점을 정리하고 샥즈 오픈닷 2와 비교했습니다.</description>
+    </item>
+    <item>
+      <title>애플워치 시리즈 12 후기 총정리: 장단점, 갤럭시 워치9 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/apple-watch-series-12/</link>
+      <guid>https://aestgav-maker.github.io/apple-watch-series-12/</guid>
+      <category>웨어러블</category>
+      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
+      <description>애플워치 시리즈 12 실사용 후기와 리뷰를 모아 5초 심박 측정, 준비 상태 점수, 급속 충전, 배터리, 넓어진 베젤까지 장단점을 정리하고 갤럭시 워치9과 가격·스펙을 비교했습니다.</description>
     </item>
   </channel>
 </rss>
