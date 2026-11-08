@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://aestgav-maker.github.io/</loc></url>
-  <url><loc>https://aestgav-maker.github.io/galaxy-buds-on/</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://aestgav-maker.github.io/iphone-duo/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://aestgav-maker.github.io/galaxy-buds-on/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://aestgav-maker.github.io/category/smartphone/</loc></url>
+  <url><loc>https://aestgav-maker.github.io/category/audio/</loc></url>
+  <url><loc>https://aestgav-maker.github.io/about/</loc></url>
 </urlset>

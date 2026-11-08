@@ -6,20 +6,22 @@
     <description>화제의 신제품, 먼저 써 본 사람들의 후기와 공식 자료를 모아 장단점과 비교까지 한눈에 정리합니다.</description>
     <language>ko</language>
     <atom:link href="https://aestgav-maker.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 08 Nov 2026 05:32:29 GMT</lastBuildDate>
-    <item>
-      <title>갤럭시 버즈 온 후기 총정리: 장단점, 샥즈 오픈닷 2 비교, 살까 말까</title>
-      <link>https://aestgav-maker.github.io/galaxy-buds-on/</link>
-      <guid>https://aestgav-maker.github.io/galaxy-buds-on/</guid>
-      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
-      <description>갤럭시 버즈 온 실사용 후기를 모아 음질, 착용감, 통화 품질, 소리 샘까지 장단점을 정리하고 샥즈 오픈닷 2와 비교했습니다.</description>
-    </item>
+    <lastBuildDate>Sun, 08 Nov 2026 05:43:34 GMT</lastBuildDate>
     <item>
       <title>아이폰 듀오 후기 총정리: 장단점, 갤럭시 Z 폴드8 비교, 살까 말까</title>
       <link>https://aestgav-maker.github.io/iphone-duo/</link>
       <guid>https://aestgav-maker.github.io/iphone-duo/</guid>
+      <category>스마트폰</category>
       <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
       <description>애플 첫 폴더블 아이폰 듀오 실사용 후기와 외신 평가를 모아 가격, 앱 최적화, 멀티태스킹, 배터리, 내구성까지 장단점을 정리하고 갤럭시 Z 폴드8과 비교했습니다.</description>
+    </item>
+    <item>
+      <title>갤럭시 버즈 온 후기 총정리: 장단점, 샥즈 오픈닷 2 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/galaxy-buds-on/</link>
+      <guid>https://aestgav-maker.github.io/galaxy-buds-on/</guid>
+      <category>오디오</category>
+      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
+      <description>갤럭시 버즈 온 실사용 후기를 모아 음질, 착용감, 통화 품질, 소리 샘까지 장단점을 정리하고 샥즈 오픈닷 2와 비교했습니다.</description>
     </item>
   </channel>
 </rss>
