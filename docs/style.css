@@ -1,0 +1,101 @@
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --text: #22262b;
+  --muted: #5f6670;
+  --line: #e4e1da;
+  --accent: #c2410c;
+  --accent-soft: #fff1e8;
+  --table-head: #f4f1ea;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181b;
+    --surface: #1e2125;
+    --text: #e8e6e1;
+    --muted: #a3a8af;
+    --line: #33373d;
+    --accent: #fb923c;
+    --accent-soft: #2b2018;
+    --table-head: #262a2f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  line-height: 1.85;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+a { color: var(--accent); }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+.site-header { border-bottom: 1px solid var(--line); background: var(--surface); padding: 20px 0 14px; }
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--text); text-decoration: none; }
+.tagline { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
+
+main { padding: 28px 16px 48px; }
+
+/* 첫 화면 카드 목록 */
+.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+.card a {
+  display: block; overflow: hidden; color: inherit; text-decoration: none;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+}
+.card a:hover { border-color: var(--accent); }
+.card img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #fff; }
+.card-text { padding: 16px 18px 18px; }
+.card h2 { margin: 0 0 6px; font-size: 1.2rem; line-height: 1.45; }
+.card p { margin: 0 0 8px; color: var(--muted); font-size: 0.97rem; line-height: 1.6; }
+.card time { color: var(--muted); font-size: 0.85rem; }
+
+/* 글 본문 */
+.post h1 { font-size: 1.75rem; line-height: 1.4; margin: 4px 0 24px; }
+.post-date { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.post h2 {
+  margin: 48px 0 16px; padding-top: 20px; font-size: 1.4rem; line-height: 1.45;
+  border-top: 2px solid var(--line);
+}
+.post h3 { margin: 32px 0 10px; font-size: 1.18rem; line-height: 1.5; }
+.post h3::before { content: ""; display: inline-block; width: 6px; height: 1em; margin-right: 10px; vertical-align: -2px; background: var(--accent); border-radius: 3px; }
+.post p { margin: 0 0 18px; }
+.post img { display: block; max-width: 100%; height: auto; margin: 8px auto 4px; border-radius: 12px; background: #fff; }
+.post .caption { margin-top: 0; color: var(--muted); font-size: 0.9rem; text-align: center; }
+.post ul { padding-left: 1.3em; }
+.post li { margin-bottom: 8px; }
+
+/* 안내 상자: 본문에 class="notice" 를 붙이면 사용 */
+.post .notice {
+  background: var(--accent-soft); border-left: 4px solid var(--accent); border-radius: 8px; padding: 14px 16px;
+}
+
+/* 표 */
+.post table { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 0.97rem; background: var(--surface); }
+.post th, .post td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+.post th { background: var(--table-head); font-weight: 700; }
+.post .table-scroll { overflow-x: auto; }
+
+.tags { margin-top: 40px; }
+.tag { display: inline-block; margin: 0 6px 6px 0; padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 0.88rem; }
+.back { margin-top: 24px; }
+
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; line-height: 1.6; padding: 24px 0 40px; }
+
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .post h1 { font-size: 1.45rem; }
+  .post h2 { font-size: 1.25rem; }
+  .post table { font-size: 0.9rem; }
+  .post th, .post td { padding: 8px; }
+}

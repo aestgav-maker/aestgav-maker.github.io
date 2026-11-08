@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>후기 한눈에</title>
+    <link>https://aestgav-maker.github.io/</link>
+    <description>화제의 신제품, 먼저 써 본 사람들의 후기와 공식 자료를 모아 장단점과 비교까지 한눈에 정리합니다.</description>
+    <language>ko</language>
+    <item>
+      <title>갤럭시 버즈 온 후기 총정리: 장단점, 샥즈 오픈닷 2 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/galaxy-buds-on/</link>
+      <guid>https://aestgav-maker.github.io/galaxy-buds-on/</guid>
+      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
+      <description>갤럭시 버즈 온 실사용 후기를 모아 음질, 착용감, 통화 품질, 소리 샘까지 장단점을 정리하고 샥즈 오픈닷 2와 비교했습니다.</description>
+    </item>
+  </channel>
+</rss>

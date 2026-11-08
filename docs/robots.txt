@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aestgav-maker.github.io/sitemap.xml
