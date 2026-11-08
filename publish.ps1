@@ -20,3 +20,6 @@ if ($LASTEXITCODE -ne 0) { throw '커밋에 실패했어요.' }
 git push
 if ($LASTEXITCODE -ne 0) { throw 'GitHub에 올리지 못했어요. 로그인 상태를 확인해 주세요.' }
 Write-Host '올렸어요. 몇 분 뒤 사이트에 반영돼요.'
+
+# 사이트에 반영되면 네이버, Bing 등에 새 글을 알린다
+node indexnow.js

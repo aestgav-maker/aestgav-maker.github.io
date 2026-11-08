@@ -185,6 +185,7 @@ ${items}
 `);
 
   fs.writeFileSync(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${base}/sitemap.xml\n`);
+  if (config.indexNowKey) fs.writeFileSync(path.join(out, `${config.indexNowKey}.txt`), config.indexNowKey);
   fs.writeFileSync(path.join(out, '.nojekyll'), '');
   fs.copyFileSync(path.join(root, 'style.css'), path.join(out, 'style.css'));
   fs.cpSync(path.join(root, 'images'), path.join(out, 'images'), { recursive: true });
