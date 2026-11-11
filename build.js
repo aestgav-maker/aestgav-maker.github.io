@@ -157,6 +157,7 @@ function layout({ title, description, url, image, body, cats, activeSlug = '', t
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="/style.css">
   ${verify}
+  ${config.goatcounterCode ? `<script data-goatcounter="https://${escapeHtml(config.goatcounterCode)}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>` : ''}
   ${extraHead}
 </head>
 <body class="${bodyClass}">
