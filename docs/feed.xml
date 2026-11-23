@@ -6,7 +6,15 @@
     <description>화제의 신제품, 먼저 써 본 사람들의 후기와 공식 자료를 모아 장단점과 비교까지 한눈에 정리합니다.</description>
     <language>ko</language>
     <atom:link href="https://aestgav-maker.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 21 Nov 2026 12:22:07 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 12:30:21 GMT</lastBuildDate>
+    <item>
+      <title>애플 홈뷰 후기 총정리: 장단점, 구글 네스트 허브·아마존 에코쇼 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/apple-homeview/</link>
+      <guid>https://aestgav-maker.github.io/apple-homeview/</guid>
+      <category>가전</category>
+      <pubDate>Sun, 22 Nov 2026 22:00:00 GMT</pubDate>
+      <description>11월 13일 해외에서 출시된 애플 첫 스마트 디스플레이 홈뷰 후기를 모아 가격, 스펙, 음질, 시리 AI 속도, 아이폰 의존 문제와 국내 출시 여부까지 정리하고 구글 네스트 허브, 아마존 에코쇼와 비교했습니다.</description>
+    </item>
     <item>
       <title>다이소 1인용 도기 밥솥 후기 총정리: 장단점, 즉석밥 비교, 살까 말까</title>
       <link>https://aestgav-maker.github.io/daiso-ceramic-rice-cooker/</link>
