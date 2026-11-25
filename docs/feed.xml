@@ -6,7 +6,15 @@
     <description>화제의 신제품, 먼저 써 본 사람들의 후기와 공식 자료를 모아 장단점과 비교까지 한눈에 정리합니다.</description>
     <language>ko</language>
     <atom:link href="https://aestgav-maker.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 24 Nov 2026 13:06:46 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 12:42:09 GMT</lastBuildDate>
+    <item>
+      <title>소니 MDR-3R 후기 총정리: 장단점, 코스 포타프로 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/sony-mdr-3r/</link>
+      <guid>https://aestgav-maker.github.io/sony-mdr-3r/</guid>
+      <category>오디오</category>
+      <pubDate>Tue, 24 Nov 2026 22:00:00 GMT</pubDate>
+      <description>1979년 워크맨 헤드폰을 USB-C로 되살린 소니 MDR-3R. 가격 8만 9,000원, 38g 무게와 레트로 디자인, 저음과 호환성 문제까지 실사용 후기와 측정 리뷰를 모아 장단점을 정리하고 코스 포타프로, 소니 WH-CH530과 비교했습니다.</description>
+    </item>
     <item>
       <title>다이소 크리스마스마켓 조립 블록 후기 총정리: 장단점, 레고 비교, 살까 말까</title>
       <link>https://aestgav-maker.github.io/daiso-christmas-market-blocks/</link>
@@ -158,14 +166,6 @@
       <category>오디오</category>
       <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
       <description>갤럭시 버즈 온 실사용 후기를 모아 음질, 착용감, 통화 품질, 소리 샘까지 장단점을 정리하고 샥즈 오픈닷 2와 비교했습니다.</description>
-    </item>
-    <item>
-      <title>애플워치 시리즈 12 후기 총정리: 장단점, 갤럭시 워치9 비교, 살까 말까</title>
-      <link>https://aestgav-maker.github.io/apple-watch-series-12/</link>
-      <guid>https://aestgav-maker.github.io/apple-watch-series-12/</guid>
-      <category>웨어러블</category>
-      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
-      <description>애플워치 시리즈 12 실사용 후기와 리뷰를 모아 5초 심박 측정, 준비 상태 점수, 급속 충전, 배터리, 넓어진 베젤까지 장단점을 정리하고 갤럭시 워치9과 가격·스펙을 비교했습니다.</description>
     </item>
   </channel>
 </rss>
