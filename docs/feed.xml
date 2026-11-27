@@ -6,7 +6,15 @@
     <description>화제의 신제품, 먼저 써 본 사람들의 후기와 공식 자료를 모아 장단점과 비교까지 한눈에 정리합니다.</description>
     <language>ko</language>
     <atom:link href="https://aestgav-maker.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 26 Nov 2026 12:02:05 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 15:17:33 GMT</lastBuildDate>
+    <item>
+      <title>다이슨 W1 펜슬워시 후기 총정리: 장단점, 1세대 펜슬워시 비교, 살까 말까</title>
+      <link>https://aestgav-maker.github.io/dyson-w1-pencilwash/</link>
+      <guid>https://aestgav-maker.github.io/dyson-w1-pencilwash/</guid>
+      <category>가전</category>
+      <pubDate>Fri, 27 Nov 2026 22:00:00 GMT</pubDate>
+      <description>다이슨 W1 펜슬워시 물청소기+독 후기를 모아 청소 성능, 배터리, 머리카락 엉킴, 롤러 건조까지 장단점을 정리하고 1세대 펜슬워시와 가격·스펙을 비교했습니다.</description>
+    </item>
     <item>
       <title>애플 TV 4K 4세대 후기 총정리: 장단점, 3세대 비교, 살까 말까</title>
       <link>https://aestgav-maker.github.io/apple-tv-4k-4th-gen/</link>
@@ -158,14 +166,6 @@
       <category>생활</category>
       <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
       <description>갤럭시 스마트태그3 공개 후기와 삼성 공식 자료를 모아 가격, 크기, 60m 컴퍼스 뷰, 아이폰 연동 범위, 배터리까지 장단점을 정리하고 애플 에어태그 2세대와 가격과 기능을 비교해 누구에게 맞는지 알려 드립니다.</description>
-    </item>
-    <item>
-      <title>갤럭시 S26 FE 후기 총정리: 장단점, 갤럭시 S26 비교, 살까 말까</title>
-      <link>https://aestgav-maker.github.io/galaxy-s26-fe/</link>
-      <guid>https://aestgav-maker.github.io/galaxy-s26-fe/</guid>
-      <category>스마트폰</category>
-      <pubDate>Sat, 07 Nov 2026 22:00:00 GMT</pubDate>
-      <description>갤럭시 S26 FE 실사용 후기와 국내외 리뷰를 모아 104만5000원 가격, 엑시노스 2500 성능, 배터리와 45W 충전, 카메라, USB 2.0 논란까지 장단점을 정리하고 갤럭시 S26과 비교했습니다.</description>
     </item>
   </channel>
 </rss>
